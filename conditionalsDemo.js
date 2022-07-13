@@ -83,3 +83,5 @@ if(testArray){
 } else {
     console.log("False")
 }
+
+let newPokemon = "Pikachu"
