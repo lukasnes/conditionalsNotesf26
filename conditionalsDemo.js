@@ -1,87 +1,82 @@
-let blaziken = "Kelvin"
-let gengar = "Lukas"
+let pikachuHealth = 100
+let gengarHealth = 250
 
-if(blaziken === "Lukas"){
-    console.log("This is Lukas' Pokemon")
+let pikachuAttack = 20
+let gengarAttack = 30
+
+if(gengarAttack < pikachuAttack){
+    console.log("Pikachu is stronger")
+} else if(pikachuAttack < gengarAttack){
+    console.log("Gengar is stronger")
 } else {
-    console.log("This is Kelvin's Pokemon")
-}
-//camel case
-let blazikenAtk = 30
-let gengarAtk = 30
-//snake case
-// let blaziken_atk = 45
-// let gengar_atk = 30
-//kebab case
-// let blazin-atk = 45
-
-let blazikenHP = 200
-let gengarHP = 260
-
-if(blazikenAtk > gengarAtk) {
-    // gengarHP = gengarHP - blazikenAtk
-    gengarHP -= blazikenAtk
-    console.log(gengarHP)
-} else if (gengarAtk > blazikenAtk) {
-    blazikenHP -= gengarAtk
-    console.log(`Blaziken's new HP is ${blazikenHP}`)
-} else {
-    console.log("They both missed!")
+    console.log("They're equally strong")
 }
 
-let furySwipes = 35
+gengarHealth = gengarHealth - pikachuAttack
+console.log(gengarHealth)
+
+gengarHealth -= pikachuAttack
+console.log(gengarHealth)
+
+gengarHealth++
+console.log(gengarHealth)
+
+gengarHealth--
+console.log(gengarHealth)
+
+console.log("=========================================")
+
+// for(i = 20; i >= 0; i -= 2){
+//     console.log(i)
+// }
 
 for(i = 0; i < 3; i++){
-    console.log(i);
-    console.log("Blaziken used fury swipes!");
-    gengarHP -= furySwipes;
-    console.log(`Gengar's HP is now ${gengarHP}`);
-};
-
-console.log("---------------")
-
-let lowKick = 60
-
-for(i = 4; i > 0; i--){
-    console.log(i)
-    console.log("Gengar used low kick!")
-    blazikenHP -= lowKick
-    console.log("Blaziken's HP is now " + blazikenHP)
+    pikachuHealth -= gengarAttack
+    console.log(`Pikachu's health is now ${pikachuHealth}`)
 }
 
-for(i = 1; i <= 10; i += 2){
-    console.log("Odd numbers are " + i)
-}
+gengarFainted = false
+console.log("========================")
 
-console.log("=========================")
-
-let gengarFainted = false
-
-while(gengarHP > 0) {
-    console.log("Blaziken used fury swipes")
-    gengarHP -= furySwipes
-    if(gengarHP < 0){
-        gengarHP = 0
+while(gengarFainted !== true){
+    gengarHealth -= pikachuAttack
+    console.log(`Gengar's Health is now ${gengarHealth}`)
+    if(gengarHealth <= 0){
         gengarFainted = true
     }
-    console.log("Gengar's HP is now " + gengarHP)
-    if(gengarFainted){
-        console.log("Gengar has fainted")
+}
+
+console.log("Gengar fainted!")
+
+
+
+let catName = "Tigger"
+let catAge = 1
+let catColor = "orange"
+
+console.log(`My cat's name is ${catName}, his fur is ${catColor}, and his age is ${catAge}`)
+            //   0     1        2        3         fruits.length
+let fruits = ["banana","apple"]
+console.log("=========" + fruits.length + "===============")
+let fruitStr = "I really like "
+
+for(i = 0; i < fruits.length; i++){
+    if(i !== fruits.length - 1){
+        fruitStr += `${fruits[i]}, `
+    } else {
+        fruitStr += `and ${fruits[i]}.`
     }
+
+
+    // if(i === fruits.length - 1){
+    //     fruitStr += `and ${fruits[i]}`
+    // } else {
+    //     fruitStr += `${fruits[i]}, `
+    // }
 }
+console.log(fruitStr)
 
-let boolean = false
 
-let falseNum = 10
+console.log("1" != 1, "1" !== 1)
 
-let falseStr = " "
-
-let testArray = []
-
-if(testArray){
-    console.log("True")
-} else {
-    console.log("False")
-}
-
-let newPokemon = "Pikachu"
+console.log(!false)
